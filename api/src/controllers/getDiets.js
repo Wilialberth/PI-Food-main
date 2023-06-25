@@ -8,8 +8,8 @@ const getDiets = async (req, res) => {
     try {
       let dietsApi = [];
       let dietsDbAll = [];
-      let diets = await Diet.findAll(); // con findAll me traigo información de mi BDD
-      let dietsDb = await Recipe.findAll({
+      let diets = await Diet.findAll(); 
+      let dietsDb = await Recipe.findAll({ // con findAll me traigo información de mi BDD
         include: { // me traigo todas las dietas que me incluya el modelo Diet y de dicho modelo me traigo id y name
                     //le digo qué atributos quiero de la llamada que hago.
           model: Diet,
