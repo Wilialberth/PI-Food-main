@@ -16,7 +16,7 @@ const getRecipesName = async (req, res) => {
 
         const {data} = await axios(`${URL}/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true`);
 
-        const apiRecipes = data.results.filter(coincidence => coincidence.title.toLowerCase().includes(name.toLowerCase())).map(recipe => {
+        const apiRecipes = data.results.filter(coincidence => coincidence.title.toLowerCase().includes(name.toLowerCase())).map(recipe => { //las busca independientemente de mayúsculas o minúsculas.
             const instructions = recipe.analyzedInstructions && recipe.analyzedInstructions[0] ? recipe.analyzedInstructions[0].steps.map(step => step.step) : [];
             const diets = recipe.diets || recipe.Diets.map(diet => diet.name);
             return {   
@@ -51,7 +51,7 @@ const getRecipesName = async (req, res) => {
         const allRecipes = apiRecipes.concat(dbRecipesAll);
 
         if (allRecipes.length === 0) {
-            return res.status(400).send(`No hay recetas con el nombre: ${name}`)
+            return res.status(400).send(`No hay recetas con el nombre: ${name}`) //Si no existe la receta, debe mostrar un mensaje adecuado.
         }
         
         return res.status(200).json(allRecipes);
