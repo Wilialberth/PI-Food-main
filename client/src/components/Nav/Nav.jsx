@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { recipesName, cleanDetail } from "../../redux/actions";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar.jsx";
 import Card from "../Card/Card";
 import Filtered from "../Filtered/Filtered";
 import style from "./Nav.module.css"
@@ -46,7 +46,7 @@ import style from "./Nav.module.css"
             <SearchBar onSearch={handleSearch}/>
             <div className={style.container}>
             <button onClick={handleHome} className={style.button}>Home</button>
-            <button onClick={handleLogin} className={style.button}>Log aut</button>
+            <button onClick={handleLogin} className={style.button}>Log out</button>
             <button onClick={handlecreateRecipe} className={style.button}>Create recipe</button>
             </div>
             <Filtered/>

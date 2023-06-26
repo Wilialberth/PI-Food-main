@@ -3,9 +3,9 @@ import axios from "axios";
 
 
 export const allRecipes = () => {
-    const endpoint = '/recipes';
+    //const endpoint = '/recipes';
     return async (dispatch) => {
-        const {data} = await axios.get(endpoint);
+        const {data} = await axios.get('http://localhost:3001/recipes');
         return dispatch({
             type: ALL_RECIPES,
             payload: data
@@ -15,9 +15,9 @@ export const allRecipes = () => {
 
 
 export const recipesId = (id) => {
-    const endpoint = `/recipes/${id}`;
+    //const endpoint = `/recipes/${id}`;
     return async (dispatch) => {
-        const {data} = await axios.get(endpoint);
+        const {data} = await axios.get(`http://localhost:3001/recipes/${id}`);
         return dispatch({
             type: RECIPES_ID,
             payload: data
@@ -27,9 +27,9 @@ export const recipesId = (id) => {
 
 
 export const recipesName = (name) => {
-    const endpoint = `/recipesName?name=${name}`;
+    //const endpoint = `/recipesName?name=${name}`;
     return async (dispatch) => {
-        const {data} = await axios.get(endpoint);
+        const {data} = await axios.get(`http://localhost:3001/recipesName?name=${name}`);
         return dispatch({
             type: RECIPES_NAME,
             payload: data
@@ -39,9 +39,9 @@ export const recipesName = (name) => {
 
 
 export const createRecipes = (create) => {
-    const endpoint = '/recipes';
+    //const endpoint = '/recipes';
     return async (dispatch) => {
-        const {data} = await axios.post(endpoint, create);
+        const {data} = await axios.post('http://localhost:3001/recipes'  , create);
         return dispatch({
             type: CREATE_RECIPES,
             payload: data
@@ -51,9 +51,9 @@ export const createRecipes = (create) => {
 
 
 export const dietsAll = () => {
-    const endpoint = `/diets`;
+    //const endpoint = '/diets'; // quito `/diets` y pongo '/diets'
     return async (dispatch) => {
-        const {data} = await axios.get(endpoint);
+        const {data} = await axios.get('http://localhost:3001/diets');
         return dispatch({
             type: DIETS,
             payload: data

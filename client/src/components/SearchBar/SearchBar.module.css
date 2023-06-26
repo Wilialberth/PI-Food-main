@@ -1,16 +1,20 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    padding-left: 16.3rem;
+.input {
+    font-size: 1.25rem;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    border: .2rem solid gold;
+    padding: 0.3rem;
+    margin: 1rem;
+    font-family: "Times New Roman";
 }
 
-.button {
+.search {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -10px;
-    margin-left: 100px;
+    margin-left: 715px;
     border-radius: 1rem;
     width: 16rem;
     background-color: gold;
@@ -21,8 +25,16 @@
     transition: background-color 0.5s;
 }
 
-.button:hover{
+.search:hover{
     border: 2px solid gold;
     background-color: black;
     color: gold;
+}
+
+.error {
+    color: white;
+    margin-left: 5rem;
+    font-size: 23px;
+    font-family: "Times New Roman";
+    padding-bottom: 50px
 }

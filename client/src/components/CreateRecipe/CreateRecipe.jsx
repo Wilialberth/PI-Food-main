@@ -2,7 +2,7 @@ import { createRecipes, allRecipes } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import validateRecipes from "../Validation/ValidationRecipes";
-import style from "./CreateRecipes.module.css"
+import style from "./CreateRecipe.module.css"
 
 const CreateRecipe = () => {
 
@@ -104,4 +104,4 @@ const CreateRecipe = () => {
 }
 
 
-export default CreateRecipe
+export default CreateRecipe;

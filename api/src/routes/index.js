@@ -7,12 +7,13 @@ const { getRecipes } = require("../controllers/getRecipes")
 const { getRecipesId } = require("../controllers/getRecipesId")
 const { getRecipesName } = require("../controllers/getRecipesName");
 const { postRecipes } = require("../controllers/postRecipes")
-const { getDiets } = require("../controllers/getDiets")
+const { getDiets } = require("../controllers/getDiets");
+const {login} = require("../controllers/login")
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-//router.get('/login', login);
+router.get('/login', login);
 
 router.get("/recipes", (req, res) => {
     getRecipes(req, res);
