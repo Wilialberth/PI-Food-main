@@ -35,7 +35,7 @@ const getRecipesId = async (req, res) => {
 
 
 
-        const {data} = await axios(`${URL}/recipes/${idRecipe}/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true`); // agregué ${idRecipe}
+        const {data} = await axios(`${URL}/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true`); // agregué ${idRecipe}
 
         const filteredRecipe = data.results.find(diet => diet.id === +idRecipe)
 

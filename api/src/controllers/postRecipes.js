@@ -5,7 +5,7 @@ const postRecipes = async (req, res) => {
 
     try {
 
-        const {name, image, summary, healthScore, steps, diets} = req.body;
+        const {name, image, summary, healthScore, steps, diets} = req.body; // hago el post con todo lo que me llegará por body.
         
 
         if(!name || !image || !summary || !healthScore || !steps || !diets){
@@ -20,14 +20,14 @@ const postRecipes = async (req, res) => {
             return res.status(400).send(`El HealthScore tiene que estar en el rango de 0 a 100`);
         }
 
-        const createRecipe = await Recipe.create({name, image, summary, healthScore, steps})
+        const createRecipe = await Recipe.create({name, image, summary, healthScore, steps}) // creo mi receta
 
-        const dietsArray = diets;
+        const dietsArray = diets;  
 
         
         for (let i = 0; i < dietsArray.length; i++) {
-          const dietInstance = await Diet.findOrCreate({ where: { name: dietsArray[i] } });
-          await createRecipe.addDiet(dietInstance[0]);
+          const dietInstance = await Diet.findOrCreate({ where: { name: dietsArray[i] } }); // la diet la tengo que encontrar en el modelo Diet que todas las diets
+          await createRecipe.addDiet(dietInstance[0]);                                      //Le digo que dentro del modelo Dies me pase todas las que coincidan con la diet que le estoy pasando por body
         }
         
         const response = {
@@ -49,8 +49,6 @@ const postRecipes = async (req, res) => {
     }
 
 }
-
-
 
 module.exports = {
     postRecipes
