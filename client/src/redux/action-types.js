@@ -1,0 +1,9 @@
+export const ALL_RECIPES = "ALL_RECIPES"
+export const RECIPES_ID = "RECIPES_ID";
+export const RECIPES_NAME = "RECIPES_NAME";
+export const CREATE_RECIPES = "CREATE_RECIPES";
+export const DIETS = "DIETS";
+export const CLEAN_DETAIL = "CLEAN_DETAIL";
+export const FILTER_API = "FILTER_API";
+export const FILTER_DB = "FILTER_DB";
+export const ORDER = "ORDER";

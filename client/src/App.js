@@ -1,4 +1,6 @@
 import './App.css';
+/* import Cards from './components/Cards'
+import Detail from './components/Detail' */
 
 function App() {
   return (

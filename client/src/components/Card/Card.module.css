@@ -1,0 +1,63 @@
+.diet {
+    background-position: right;
+    display: inline-block;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contenedor {
+    width: 20rem;
+    height: auto;
+    border-radius: 1rem;
+    border: 0.4rem solid black;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: 5rem;
+    margin: 3rem;
+    border: 1px solid white;
+}
+
+.image {
+    border-radius: 1rem;
+    border: 5px solid gold;
+}
+
+.link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-bottom: 40px;
+    width: 19rem;
+    background-color: gold;
+    padding: 0.5rem;
+    border: 1px solid gold;
+    font-size: 15px;
+    font-family: "Times New Roman";
+    transition: background-color 0.5s;
+}
+
+.link:hover {
+    border: 2px solid gold;
+    background-color: black;
+    color: gold;
+}
+
+a:visited {
+    color: black;
+  }
+  
+a:link {
+    color: black;
+}
+
+.fullScreen {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}

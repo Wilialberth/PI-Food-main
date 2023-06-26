@@ -1,0 +1,90 @@
+.contenedor {
+    margin: 37rem;
+    padding: 3rem;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 130px;
+    background-color: black;
+    color: gold;
+    border: 3px solid white;
+}
+  
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 1rem;
+    width: 20rem;
+    background-color: gold;
+    padding: 0.5rem;
+    border: 1px solid gold;
+    font-size: 30px;
+    font-family: "Times New Roman";
+    transition: background-color 0.5s;
+}
+
+.submit:hover{
+    border: 2px solid gold;
+    background-color: black;
+    color: gold;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.email {
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-family: "Times New Roman";
+}
+
+.errorEmail {
+    color: white;
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+
+.errorPassword {
+    color: white;
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+  
+.password {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-family: "Times New Roman";
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 20rem;
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid white;
+    font-size: 20px;
+    font-family: "Times New Roman";
+    transition: background-color 0.5s;
+}
+
+.fullScreen {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('https://img.freepik.com/vector-gratis/papel-pintado-mural-restaurante_23-2148706001.jpg?w=2000');
+}
