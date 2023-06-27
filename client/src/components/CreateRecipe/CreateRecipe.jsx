@@ -19,9 +19,9 @@ const CreateRecipe = () => {
         diets: ""
     });
 
-    const [shouldCreate, setShouldCreate] = useState(false);
+    const [shouldCreate, setShouldCreate] = useState(false); //si lo establezco inicialmente en true, significa que se intentará crear automáticamente una receta cuando se cargue el componente.
     const [errors, setErrors] = useState({});
-    const [createSuccess, setCreateSuccess] = useState(false);
+    const [createSuccess, setCreateSuccess] = useState(false);//Al establecerlo inicialmente en false, el mensaje de éxito no se mostrará de forma predeterminada
 
       const handleInputChange = (event) => {
         const { name, value } = event.target;
