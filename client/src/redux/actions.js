@@ -7,8 +7,8 @@ export const allRecipes = () => {
     return async (dispatch) => {
         const {data} = await axios.get('http://localhost:3001/recipes');
         return dispatch({
-            type: ALL_RECIPES,
-            payload: data
+            type: ALL_RECIPES, // propiedad que describe lo que quiero que haga.
+            payload: data // info adicional que le envío al reducer para que sepa lo que tiene que hacer.
         })
     }
 }
