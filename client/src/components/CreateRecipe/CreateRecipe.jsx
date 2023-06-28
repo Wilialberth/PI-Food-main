@@ -22,16 +22,20 @@ const CreateRecipe = () => {
     const [shouldCreate, setShouldCreate] = useState(false); //si lo establezco inicialmente en true, significa que se intentará crear automáticamente una receta cuando se cargue el componente.
     const [errors, setErrors] = useState({});
     const [createSuccess, setCreateSuccess] = useState(false);//Al establecerlo inicialmente en false, el mensaje de éxito no se mostrará de forma predeterminada
+    
 
       const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevState) => ({ ...prevState, [name]: value }));
+
+        
       };
 
       const handleCreate = () => {
         const validationErrors = validateRecipes(recipes, formData);
         const dietsArray = formData.diets.split(",").map((diet) => diet.trim());
         const updatedFormData = { ...formData, diets: dietsArray };
+        
         if (Object.keys(validationErrors).length === 0) {
             dispatch(createRecipes(updatedFormData));
             setShouldCreate(true);
@@ -69,7 +73,8 @@ const CreateRecipe = () => {
     return(
 
         <div className={style.container}>
-
+          
+            
             <p className={style.name}>Enter the name of the recipe to create</p>
             <label htmlFor="name" className={style.name}>Name: </label>
             <input name="name" type="text" value={formData.name} onChange={handleInputChange} className={style.input}/>
@@ -99,7 +104,7 @@ const CreateRecipe = () => {
             {createSuccess && <p className={style.error}>Recipe created successfully!</p>}
             {Object.keys(errors).length > 0 && (<p className={style.error}>Failed to create recipe. Please check the form.</p>)}
         </div>
-
+    
     )
 }
 
