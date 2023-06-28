@@ -4,9 +4,7 @@ import style from "./Form.module.css"
 
 const Form = ({login}) => {
 
-    const [errors, setErrors] = useState({
-
-    })
+    const [errors, setErrors] = useState({});
 
     const [userData, setUserData] = useState({
         email: "",
@@ -18,6 +16,15 @@ const Form = ({login}) => {
             ...userData,
             [event.target.name] : event.target.value
         })
+        /* const handleChange = (event) => {
+            const { name, value } = event.target;
+            setUserData((prevUserData) => ({
+              ...prevUserData,
+              [name]: value
+            }));
+          }; */
+          
+
         setErrors(validation({
             ...userData,
             [event.target.name] : event.target.value
