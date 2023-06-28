@@ -7,7 +7,7 @@ import style from "./Cards.module.css"
 export default function Cards() {
     const dispatch = useDispatch();
     const recipes = useSelector(state => state.recipesDiets)
-    useEffect(() => {
+    useEffect(() => { //me traigo
       dispatch(allRecipes())
     }, [dispatch])
    return (

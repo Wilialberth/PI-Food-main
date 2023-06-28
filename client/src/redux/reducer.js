@@ -103,3 +103,7 @@ const reducer = (state = initialState, {type, payload}) => {
 }
 
 export default reducer
+
+//son funciones puras que actualizan el estado de la aplicación en respuesta a las acciones
+//Son los que actualizan el estado de acuerdo a las actions.
+//Toma el estado anterior y una acción, y devuelve en nuevo estado.

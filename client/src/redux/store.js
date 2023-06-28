@@ -10,4 +10,6 @@ const store = createStore(
 );
 
 
-export default store
+export default store;
+
+//Es el obj que reúne al reducer y las actions.

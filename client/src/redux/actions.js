@@ -80,3 +80,9 @@ export const cleanDetail = () => {
     return {type: CLEAN_DETAIL}
 
 }
+//es un obj describiendo lo que pasó.
+//Actions son un bloque de información que envia datos desde mi aplicación a mi store. 
+//Son la única fuente de información para el store. 
+//Las enviamos al store usando dispatch().
+//Nos dicen que algo pasó pero no específica cómo cambio el estado de la app en respues ya que ese es trabajo de los reducers.
+//Representan los hechos sobre "lo que pasó".
